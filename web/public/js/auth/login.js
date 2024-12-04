@@ -13,6 +13,8 @@ $(document).ready(function() {
             success: function(response) {
                 if (response.message == "Usuário identificado com sucesso!") {
                     localStorage.setItem('token', response.token);
+                    localStorage.setItem('nome_user', response.nome);
+                    
                     window.location.href = '/public/pages/index.html';
                 }
             },

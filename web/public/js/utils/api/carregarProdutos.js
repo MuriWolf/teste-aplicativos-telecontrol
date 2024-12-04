@@ -1,3 +1,5 @@
+import verificarAutenticacaoUsuario from "../verificarAutenticacaoUsuario.js";
+
 export default async function carregarProdutos() {
     const token = localStorage.getItem('token'); 
 
@@ -10,9 +12,12 @@ export default async function carregarProdutos() {
         const response = await fetch('http://localhost:8000/api/produtos', {
             method: 'GET',
             headers: {
+                'Accept': 'application/json',
                 'Authorization': `Bearer ${token}`
             }
         });
+
+        verificarAutenticacaoUsuario(response);
 
         if (!response.ok) {
             throw new Error('Erro ao carregar produtos');

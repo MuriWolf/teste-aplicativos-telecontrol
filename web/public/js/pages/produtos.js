@@ -1,4 +1,4 @@
-import carregarProdutos from "./utils/carregarProdutos.js";
+import carregarProdutos from "../utils/api/carregarProdutos.js";
 
 async function popularTabelaProdutos() {
     let produtos = await carregarProdutos();

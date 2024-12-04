@@ -1,3 +1,5 @@
+import verificarAutenticacaoUsuario from "../verificarAutenticacaoUsuario.js";
+
 export default async function carregarOrdensServico() {
     const token = localStorage.getItem('token'); 
 
@@ -10,18 +12,21 @@ export default async function carregarOrdensServico() {
         const response = await fetch('http://localhost:8000/api/ordens-servico', {
             method: 'GET',
             headers: {
+                'Accept': 'application/json',
                 'Authorization': `Bearer ${token}`
             }
         });
 
+        verificarAutenticacaoUsuario(response);
+
         if (!response.ok) {
-            throw new Error('Erro ao carregar ordens de serviço');
+            throw new Error('Erro ao carregar produtos');
         }
 
-        const data = await response.json();
+        const data = await response.json();        
         return data.ordens_servico; 
     } catch (error) {
-        console.error('Erro ao carregar ordens de serviço:', error);
+        console.error('Erro ao carregar produtos:', error);
         return [];
     }
 }

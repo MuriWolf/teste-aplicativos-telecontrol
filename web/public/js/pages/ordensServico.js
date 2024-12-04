@@ -1,6 +1,6 @@
-import carregarOrdensServico from "./utils/carregarOrdensServico.js";
-import carregarProdutos from "./utils/carregarProdutos.js";
-import pegarDatatimeAtual from "./utils/pegarDatatimeAtual.js";
+import carregarOrdensServico from "../utils/api/carregarOrdensServico.js";
+import carregarProdutos from "../utils/api/carregarProdutos.js";
+import pegarDatatimeAtual from "../utils/pegarDatatimeAtual.js";
 
 async function popularTabelaEFormOrdensServico() {
     let ordens = await carregarOrdensServico();
@@ -37,10 +37,9 @@ $(document).ready(function() {
     $('#ordem-form').on('submit', function(e) {
         e.preventDefault();
 
-        const codigo = $('#codigo').val(); // Valor do campo "Número da O.S"
-        const nome = $('#nome').val(); // Valor do campo "Nome do Consumidor"
-        const cpf = $('#cpf').val(); // Valor do campo "CPF do Consumidor"
-        const codigoProduto = $('#form-codigos').val(); // Valor do campo "Código do Produto"
+        const nome = $('#nome').val();
+        const cpf = $('#cpf').val(); 
+        const codigoProduto = $('#form-codigos').val(); 
 
         // Criar um objeto com os valores
         const novaOrdemServico = {
