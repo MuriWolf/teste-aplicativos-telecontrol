@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Produtos</title>
+</head>
+<body>
+    <div class="container">
+        <a href="./ordens-servico.html">ver ordens</a>
+        <a href="./produtos.html">ver produtos</a>
+
+        <h1>Adicionar produto</h1>
+        <form id="produto-form">
+            <div class="form-group">
+                <label for="codigo">Código</label>
+                <input type="text" class="form-control" id="codigo" aria-describedby="codigoHelp" placeholder="Coloque o código">
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome do produto</label>
+                <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Coloque o nome do produto">
+            </div>
+            <div class="form-group">
+                <label for="tempoGarantia">Tempo de garantia</label>
+                <input type="date" class="form-control" id="tempo_garantia" aria-describedby="tempoGarantiaHelp">
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="ativo" name="statusRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="ativo">Ativo</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="inativo" name="statusRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="inativo">Inativo</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <h1>Lista de produtos</h1>
+        <table id="produtos-table" class="table">
+            <thead>
+                <tr>
+                  <th scope="col">Código</th>
+                  <th scope="col">Nome do Produto</th>
+                  <th scope="col">Tempo de Garantia</th>
+                  <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="../js/auth.js"></script>
+     <script src="../js/produtos.js" type="module"></script>
+</body>
+</html>

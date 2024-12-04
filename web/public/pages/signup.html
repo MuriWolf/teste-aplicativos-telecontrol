@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Signup</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="">Signup</h1>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="exampleInputEmail1">nome</label>
+                <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Coloque seu nome">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Coloque seu email">
+                <small id="emailHelp" class="form-text text-muted">Seu email nunca será compartilhado</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="Crie uma senha forte">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <a href="login.html" class="block">Entrar com conta</a>
+        </form>
+    </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="../js/signup.js"></script>
+</body>
+</html>
