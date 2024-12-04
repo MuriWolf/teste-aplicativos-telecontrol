@@ -20,10 +20,13 @@ Projeto teste para a oportunidade de emprego na Telecontrol. Foram usados as seg
 <p>Validações poderiam ter sido feitas aos campos e mostrar melhor ao usuário onde ele errou, entretanto devido ao tempo (2 dias) ainda não foram implementadas, mas, devido as validações da API e banco de dados, informações erradas não passariam.</p>
 
 ## Vídeo de Funcionamento
-[![video da aplicacao](https://img.youtube.com/vi/UocQ1U0dsrk/0.jpg)](https://www.youtube.com/watch?v=UocQ1U0dsrk )
+[![video da aplicacao](https://img.youtube.com/vi/UocQ1U0dsrk/0.jpg)](https://www.youtube.com/watch?v=UocQ1U0dsrk)
 
 # Mobile
 <p>Usar Ionic com Angular foi onde encontrei mais facilidade. Funcionalidades pedidas foram implementadas.</p>
+
+## Vídeo de Funcionamento
+[![video da aplicacao](https://img.youtube.com/vi/PP2I-szEvTs/0.jpg)](https://www.youtube.com/watch?v=PP2I-szEvTs)
 
 # Conclusão
 Foi feito o que foi pedido, questão de polimento são necessárias, porém, levando em conta o tempo para a realização (2 dias), acho que o resultado é satisfatório.
