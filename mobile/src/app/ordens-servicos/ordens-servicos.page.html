@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ordens de Serviços</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  @if (this.ordensServicos) {
+    @if (this.ordensServicos.length > 0) {
+      <ion-list>
+        @for (ordem of this.ordensServicos; track ordem.numero_ordem ) {
+          <ion-card [routerLink]="['/tabs/ordens-servicos', ordem.numero_ordem]">
+            <ion-card-header>
+              <ion-card-title>N° Ordem: {{ ordem.numero_ordem }}</ion-card-title>
+            </ion-card-header>
+  
+            <ion-card-content>
+              <ion-list>
+                <ion-item>
+                  <ion-label><strong>Cpf do consumidor</strong>: {{ ordem.cpf_consumidor }}</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label><strong>Nome do consumidor</strong>: {{ ordem.nome_consumidor }}</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label><strong>Código do produto</strong>: {{ ordem.produto_codigo }}</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label><strong>Data de abertura</strong>: {{ ordem.data_abertura }}</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label><strong>Defeito reclamado</strong>: {{ ordem.defeito_reclamado ?? 'Ainda não registrado' }}</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label><strong>Solução técnica</strong>: {{ ordem.solucao_tecnica ?? 'Ainda não registrado' }}</ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        }
+
+      </ion-list>
+    
+    } @else {
+      <p>Nenhuma ordem de serviço encontrada!</p>
+    }
+  }
+</ion-content>

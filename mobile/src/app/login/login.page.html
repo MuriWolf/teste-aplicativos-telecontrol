@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <div class="form-container">
+    <form (ngSubmit)="handleFormSubmit()" class="form" [formGroup]="loginForm" >
+      <ion-list>
+        <ion-item>
+          <ion-input label="Email" type="email" formControlName="email" maxlength="320" required placeholder="Enter company name"></ion-input>
+
+          <div *ngIf="!loginForm.valid" class="alert">
+            <div *ngIf="loginForm.hasError('email')">
+              Deve ter um formato de email
+            </div>
+          </div>
+        </ion-item>
+
+        <ion-item>
+          <ion-input label="Senha" type="password" formControlName="senha" maxlength="100" required placeholder="Enter company name"></ion-input>
+        </ion-item>
+    
+        <ion-button type="submit" expand="block" class="ion-margin-horizontal ion-margin-top">Entrar</ion-button> 
+      </ion-list>
+    </form>
+  </div>
+</ion-content>
