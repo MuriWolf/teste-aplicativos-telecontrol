@@ -66,7 +66,6 @@ $(document).ready(function() {
             contentType: 'application/json',
             data: JSON.stringify(novaOrdemServico),
             success: function(response) {
-                console.log(response);
                 popularTabelaEFormOrdensServico();
                 $('#ordem-form')[0].reset(); // Limpar o formulário
             },
