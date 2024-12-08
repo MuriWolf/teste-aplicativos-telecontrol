@@ -1,4 +1,5 @@
 import carregarProdutos from "../utils/api/carregarProdutos.js";
+import { API_URL } from "../../../src/constants.js";
 
 async function popularTabelaProdutos() {
     let produtos = await carregarProdutos();
@@ -41,7 +42,7 @@ $(document).ready(function() {
         }
 
         $.ajax({
-            url: 'http://localhost:8000/api/produtos',
+            url: `${API_URL}/api/produtos`,
             type: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`

@@ -1,4 +1,5 @@
 import verificarAutenticacaoUsuario from "../verificarAutenticacaoUsuario.js";
+import { API_URL } from "../../../../src/constants.js";
 
 export default async function carregarOrdensServico() {
     const token = localStorage.getItem('token'); 
@@ -9,7 +10,7 @@ export default async function carregarOrdensServico() {
     }
 
     try {
-        const response = await fetch('http://localhost:8000/api/ordens-servico', {
+        const response = await fetch(`${API_URL}/api/ordens-servico`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',

@@ -1,3 +1,5 @@
+import { API_URL } from "../../../src/constants.js";
+
 $(document).ready(function() {
     $('#signup-form').on('submit', function(e) {
         e.preventDefault();
@@ -7,7 +9,7 @@ $(document).ready(function() {
         const senha = $('#senha').val();
 
         $.ajax({
-            url: 'http://localhost:8000/api/cadastrar',
+            url: `${API_URL}/api/cadastrar`,
             async: true,
             type: 'POST',
             contentType: 'application/json',

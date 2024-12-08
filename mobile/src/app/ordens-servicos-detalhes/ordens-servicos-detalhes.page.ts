@@ -40,6 +40,7 @@ export class OrdensServicosDetalhesPage implements OnInit {
   async handleFormSubmit() {
     if (this.ordemServicoForm.value.solucao_tecnica && this.ordemServicoForm.value.defeito_reclamado && this.numeroOrdem) {
       let response = await this.ordensServicosService.autualizarDescricoesOrdemServico(this.numeroOrdem, this.ordemServicoForm.value as OrdemServicoDescricoes);
+      console.log(this.numeroOrdem);
       
       if (response?.nome_consumidor) {
         this.ordemservico = response;

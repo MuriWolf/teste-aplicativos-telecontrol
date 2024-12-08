@@ -1,6 +1,7 @@
 import carregarOrdensServico from "../utils/api/carregarOrdensServico.js";
 import carregarProdutos from "../utils/api/carregarProdutos.js";
 import pegarDatatimeAtual from "../utils/pegarDatatimeAtual.js";
+import { API_URL } from "../../../src/constants.js";
 
 async function popularTabelaEFormOrdensServico() {
     let ordens = await carregarOrdensServico();
@@ -57,7 +58,7 @@ $(document).ready(function() {
         }
 
         $.ajax({
-            url: 'http://localhost:8000/api/ordens-servico',
+            url: `${API_URL}/api/ordens-servico`,
             type: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`
