@@ -8,14 +8,12 @@
 </head>
 <body>
     <div class="container" style="max-width: 920px;">
-        <header class="d-flex justify-content-center py-3 mb-3">
-            <ul class="nav nav-pills">
-              <li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page">Home</a></li>
-              <li class="nav-item"><a href="./ordens-servico.html" class="nav-link">Ordens de Serviço</a></li>
-              <li class="nav-item"><a href="./produtos.html" class="nav-link">Produtos</a></li>
-            </ul>
-          </header>
-    
+        <?php 
+          include "../components/header.component.php";
+          include "../enums/PagesEnum.php";
+          echo createHeader(Pages::Home);
+        ?>        
+
         <h2 class="text-center">bem vindo, <span id="nome"></span>!</h2>
 
     </div>

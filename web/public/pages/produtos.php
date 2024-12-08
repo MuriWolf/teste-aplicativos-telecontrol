@@ -8,13 +8,11 @@
 </head>
 <body>
     <div class="container mb-5" style="max-width: 920px;">
-        <header class="d-flex justify-content-center py-3 mb-3">
-            <ul class="nav nav-pills">
-              <li class="nav-item"><a href="./index.html" class="nav-link" aria-current="page">Home</a></li>
-              <li class="nav-item"><a href="./ordens-servico.html" class="nav-link">Ordens de Serviço</a></li>
-              <li class="nav-item"><a href="./produtos.html" class="nav-link active">Produtos</a></li>
-            </ul>
-          </header>
+        <?php 
+          include "../components/header.component.php";
+          include "../enums/PagesEnum.php";
+          echo createHeader(Pages::Produtos);
+        ?>    
 
         <h2>Adicionar produto</h1>
         <form id="produto-form" class="mb-5">
